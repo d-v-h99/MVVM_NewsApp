@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.GeneralFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/hardcore_title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="10dp"
+           android:layout_marginTop="15dp"
+           android:text="Top headlines"
+           android:textSize="22sp"
+           android:textStyle="bold" />
+
+<!--       <com.jama.carouselview.CarouselView-->
+<!--           android:id="@+id/home_carousel"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           app:enableSnapping="true"-->
+<!--           app:scaleOnScroll="false"-->
+<!--           app:setAutoPlay="true"-->
+<!--           app:setAutoPlayDelay="3000"-->
+<!--           app:carouselOffset="center"-->
+<!--           app:indicatorAnimationType="drop"-->
+<!--           app:indicatorRadius="5"-->
+<!--           app:indicatorPadding="5"-->
+<!--           app:size="10"-->
+<!--           app:spacing="10"-->
+<!--           app:resource="@layout/list_item_for_top_headlines"/>-->
+       <com.denzcoskun.imageslider.ImageSlider
+           android:id="@+id/image_slider"
+           android:layout_width="wrap_content"
+           android:layout_height="300dp"
+           app:iss_auto_cycle="true"
+           app:iss_period="1000"
+           app:iss_delay="1000"
+           app:iss_text_align="CENTER"/>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+   </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
